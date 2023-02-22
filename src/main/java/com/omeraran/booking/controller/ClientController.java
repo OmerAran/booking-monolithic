@@ -5,6 +5,8 @@ import com.omeraran.booking.model.Client;
 import com.omeraran.booking.service.ClientService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/client")
 public class ClientController {
@@ -16,10 +18,27 @@ public class ClientController {
 
     @GetMapping("/{id}")
     public ClientDto getClient(@PathVariable Long id){
-        return clientService.getClient(id);
+        return clientService.getOneClient(id);
     }
+
+    @GetMapping()
+    public List<ClientDto> getAllClients(){
+        return clientService.getAllClients();
+    }
+
     @PostMapping()
     public ClientDto saveClient(@RequestBody Client client){
         return clientService.saveClient(client);
     }
+
+    @PutMapping()
+    public ClientDto updateClient(@RequestBody Client client){
+       return clientService.updateClient(client);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteOneClient(@PathVariable Long id){
+        clientService.deleteOneClient(id);
+    }
+
 }

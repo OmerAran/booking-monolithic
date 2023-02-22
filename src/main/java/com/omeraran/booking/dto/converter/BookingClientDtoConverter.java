@@ -1,20 +1,18 @@
 package com.omeraran.booking.dto.converter;
 
-import com.omeraran.booking.dto.UserDto;
-import com.omeraran.booking.model.User;
+import com.omeraran.booking.dto.BookingClientDto;
+import com.omeraran.booking.model.Client;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserDtoConverter {
+public class BookingClientDtoConverter {
 
-    public UserDto convert(User from){
-        return new UserDto(
+    public BookingClientDto convert(Client from){
+        return new BookingClientDto(
                 from.getId(),
                 from.getUsername(),
                 from.getFirstName(),
                 from.getLastName(),
-                from.getEmail(),
-                from.getPassword(),
                 from.getDateOfBirth()
         );
     }

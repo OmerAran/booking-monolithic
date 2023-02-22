@@ -6,10 +6,19 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BookingDtoConverter {
+    private final BookingMovieDtoConverter bookingMovieDtoConverter;
+    private final BookingClientDtoConverter bookingClientDtoConverter;
+
+    public BookingDtoConverter(BookingMovieDtoConverter bookingMovieDtoConverter, BookingClientDtoConverter bookingClientDtoConverter) {
+        this.bookingMovieDtoConverter = bookingMovieDtoConverter;
+        this.bookingClientDtoConverter = bookingClientDtoConverter;
+    }
 
     public BookingDto convert(Booking from){
         return new BookingDto(
-          from.getId()
+                from.getId(),
+                bookingClientDtoConverter.convert(from.getClient()),
+                bookingMovieDtoConverter.convert(from.getMovie())
         );
     }
 }

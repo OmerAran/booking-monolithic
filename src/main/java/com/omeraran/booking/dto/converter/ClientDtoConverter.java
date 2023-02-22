@@ -8,10 +8,10 @@ import java.util.stream.Collectors;
 
 @Component
 public class ClientDtoConverter {
-    private final BookingDtoConverter bookingDtoConverter;
+    private final ClientBookingDtoConverter clientBookingDtoConverter;
 
-    public ClientDtoConverter(BookingDtoConverter bookingDtoConverter) {
-        this.bookingDtoConverter = bookingDtoConverter;
+    public ClientDtoConverter(ClientBookingDtoConverter clientBookingDtoConverter) {
+        this.clientBookingDtoConverter = clientBookingDtoConverter;
     }
 
     public ClientDto convert(Client from){
@@ -21,9 +21,7 @@ public class ClientDtoConverter {
                 from.getFirstName(),
                 from.getLastName(),
                 from.getDateOfBirth(),
-                from.getBooking().stream().map(bookingDtoConverter::convert).collect(Collectors.toSet())
+                from.getBooking().stream().map(clientBookingDtoConverter::convert).collect(Collectors.toSet())
                 );
-
-
     }
 }

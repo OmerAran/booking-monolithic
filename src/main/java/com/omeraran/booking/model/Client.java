@@ -17,7 +17,7 @@ public class Client {
     private String email;
     private String password;
     private Date dateOfBirth;
-    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "client", cascade = CascadeType.MERGE)
     private Set<Booking> booking;
 
     public Client(Long id, String username, String firstName, String lastName,

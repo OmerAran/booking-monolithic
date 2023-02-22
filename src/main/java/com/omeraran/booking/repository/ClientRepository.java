@@ -1,6 +1,5 @@
 package com.omeraran.booking.repository;
 
-
 import com.omeraran.booking.model.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

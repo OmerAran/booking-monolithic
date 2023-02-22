@@ -10,9 +10,9 @@ public class ClientDto {
     private String firstName;
     private String lastName;
     private Date dateOfBirth;
-    private Set<BookingDto> bookingDtos;
+    private Set<ClientBookingDto> bookingDtos;
 
-    public ClientDto(Long id, String username, String firstName, String lastName, Date dateOfBirth, Set<BookingDto> bookingDtos) {
+    public ClientDto(Long id, String username, String firstName, String lastName, Date dateOfBirth, Set<ClientBookingDto> bookingDtos) {
         this.id = id;
         this.username = username;
         this.firstName = firstName;
@@ -20,8 +20,6 @@ public class ClientDto {
         this.dateOfBirth = dateOfBirth;
         this.bookingDtos = bookingDtos;
     }
-
-
 
     public Long getId() {
         return id;
@@ -63,11 +61,11 @@ public class ClientDto {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public Set<BookingDto> getBookingDtos() {
+    public Set<ClientBookingDto> getBookingDtos() {
         return bookingDtos;
     }
 
-    public void setBookingDtos(Set<BookingDto> bookingDtos) {
+    public void setBookingDtos(Set<ClientBookingDto> bookingDtos) {
         this.bookingDtos = bookingDtos;
     }
 }

@@ -1,9 +1,9 @@
 package com.omeraran.booking.repository;
 
-import com.omeraran.booking.model.User;
+import com.omeraran.booking.model.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface BookingRepository extends JpaRepository<Booking, Long> {
 }

@@ -1,18 +1,15 @@
 package com.omeraran.booking.dto;
 
-
-public class MovieDto {
+public class ClientMovieDto {
 
     private Long id;
     private String name;
     private String imageUrl;
-    private MovieBookingDto movieBookingDto;
 
-    public MovieDto(Long id, String name, String imageUrl, MovieBookingDto movieBookingDto) {
+    public ClientMovieDto(Long id, String name, String imageUrl) {
         this.id = id;
         this.name = name;
         this.imageUrl = imageUrl;
-        this.movieBookingDto = movieBookingDto;
     }
 
     public Long getId() {
@@ -37,13 +34,5 @@ public class MovieDto {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
-    }
-
-    public MovieBookingDto getMovieBookingDto() {
-        return movieBookingDto;
-    }
-
-    public void setMovieBookingDto(MovieBookingDto movieBookingDto) {
-        this.movieBookingDto = movieBookingDto;
     }
 }

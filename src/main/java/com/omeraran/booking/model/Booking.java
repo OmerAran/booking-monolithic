@@ -4,18 +4,24 @@ import jakarta.persistence.*;
 
 
 @Entity
+@Table(name = "booking")
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "client_id")
     private Client client;
 
-    public Booking(Long id, Client client) {
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "movie_id")
+    private Movie movie;
+
+    public Booking(Long id, Client client, Movie movie) {
         this.id = id;
         this.client = client;
+        this.movie = movie;
     }
 
     public Booking() {
@@ -36,5 +42,13 @@ public class Booking {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
     }
 }

@@ -1,14 +1,12 @@
 package com.omeraran.booking.dto;
 
-public class BookingDto {
+public class MovieBookingDto {
     private Long id;
     private BookingClientDto bookingClientDto;
-    private BookingMovieDto bookingMovieDto;
 
-    public BookingDto(Long id, BookingClientDto bookingClientDto, BookingMovieDto bookingMovieDto) {
+    public MovieBookingDto(Long id, BookingClientDto bookingClientDto) {
         this.id = id;
         this.bookingClientDto = bookingClientDto;
-        this.bookingMovieDto = bookingMovieDto;
     }
 
     public Long getId() {
@@ -25,13 +23,5 @@ public class BookingDto {
 
     public void setBookingClientDto(BookingClientDto bookingClientDto) {
         this.bookingClientDto = bookingClientDto;
-    }
-
-    public BookingMovieDto getBookingMovieDto() {
-        return bookingMovieDto;
-    }
-
-    public void setBookingMovieDto(BookingMovieDto bookingMovieDto) {
-        this.bookingMovieDto = bookingMovieDto;
     }
 }
