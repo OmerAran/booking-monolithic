@@ -1,6 +1,7 @@
 package com.omeraran.booking.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
+import javax.persistence.Table;
 
 
 @Entity
