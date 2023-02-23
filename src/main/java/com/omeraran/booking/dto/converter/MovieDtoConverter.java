@@ -4,6 +4,8 @@ import com.omeraran.booking.dto.MovieDto;
 import com.omeraran.booking.model.Movie;
 import org.springframework.stereotype.Component;
 
+import java.util.stream.Collectors;
+
 @Component
 public class MovieDtoConverter {
     private final MovieBookingConverter movieBookingConverter;
@@ -17,6 +19,7 @@ public class MovieDtoConverter {
               from.getId(),
               from.getName(),
               from.getImageUrl(),
-              movieBookingConverter.convert(from.getBooking()));
+              from.getBooking().stream().map(movieBookingConverter::convert).collect(Collectors.toSet())
+              );
     }
 }

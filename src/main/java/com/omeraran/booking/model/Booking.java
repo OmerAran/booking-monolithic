@@ -14,7 +14,7 @@ public class Booking {
     @JoinColumn(name = "client_id")
     private Client client;
 
-    @OneToOne(cascade = CascadeType.MERGE)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "movie_id")
     private Movie movie;
 

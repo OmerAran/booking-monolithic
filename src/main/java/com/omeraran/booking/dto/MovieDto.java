@@ -1,14 +1,16 @@
 package com.omeraran.booking.dto;
 
 
+import java.util.Set;
+
 public class MovieDto {
 
     private Long id;
     private String name;
     private String imageUrl;
-    private MovieBookingDto movieBookingDto;
+    private Set<MovieBookingDto> movieBookingDto;
 
-    public MovieDto(Long id, String name, String imageUrl, MovieBookingDto movieBookingDto) {
+    public MovieDto(Long id, String name, String imageUrl, Set<MovieBookingDto> movieBookingDto) {
         this.id = id;
         this.name = name;
         this.imageUrl = imageUrl;
@@ -39,11 +41,11 @@ public class MovieDto {
         this.imageUrl = imageUrl;
     }
 
-    public MovieBookingDto getMovieBookingDto() {
+    public Set<MovieBookingDto> getMovieBookingDto() {
         return movieBookingDto;
     }
 
-    public void setMovieBookingDto(MovieBookingDto movieBookingDto) {
+    public void setMovieBookingDto(Set<MovieBookingDto> movieBookingDto) {
         this.movieBookingDto = movieBookingDto;
     }
 }

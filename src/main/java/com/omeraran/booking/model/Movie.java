@@ -2,19 +2,21 @@ package com.omeraran.booking.model;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "movie")
 public class Movie {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
     private String name;
     private String imageUrl;
-    @OneToOne(mappedBy = "movie")
-    private Booking booking;
+    @OneToMany(mappedBy = "movie")
+    private Set<Booking> booking;
 
-    public Movie(Long id, String name, String imageUrl, Booking booking) {
+    public Movie(Long id, String name, String imageUrl, Set<Booking> booking) {
         this.id = id;
         this.name = name;
         this.imageUrl = imageUrl;
@@ -49,11 +51,11 @@ public class Movie {
         this.imageUrl = imageUrl;
     }
 
-    public Booking getBooking() {
+    public Set<Booking> getBooking() {
         return booking;
     }
 
-    public void setBooking(Booking booking) {
+    public void setBooking(Set<Booking> booking) {
         this.booking = booking;
     }
 }
