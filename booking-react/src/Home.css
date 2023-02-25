@@ -1,0 +1,21 @@
+header {
+    height: 500px;
+    overflow: hidden;
+}
+
+main {
+    background-color: #f6f6f6;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2rem;
+}
+.content{
+    background-color: whitesmoke;
+    text-align: center;
+}
