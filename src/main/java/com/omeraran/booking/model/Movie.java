@@ -13,7 +13,7 @@ public class Movie {
     private Long id;
     private String name;
     private String imageUrl;
-    @OneToMany(mappedBy = "movie")
+    @OneToMany(mappedBy = "movie", cascade = CascadeType.MERGE)
     private Set<Booking> booking;
 
     public Movie(Long id, String name, String imageUrl, Set<Booking> booking) {
