@@ -16,17 +16,17 @@ function Navbar() {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/services" className="nav-links">
+                        <Link to="/booking" className="nav-links">
                             Booking
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/about" className="nav-links">
+                        <Link to="/" className="nav-links">
                             About
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/contact" className="nav-links">
+                        <Link to="/" className="nav-links">
                             Contact
                         </Link>
                     </li>
