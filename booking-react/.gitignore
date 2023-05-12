@@ -4,8 +4,15 @@
 .pnp.js
 
 # me
+mvnw
+mvnw.cmd
+HELP.md
+Untitled.drawio
+booking.iml
+
+booking-react/.idea
 .idea
-/target
+target/
 # testing
 /coverage
 
