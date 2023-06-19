@@ -2,7 +2,7 @@
 
 
 
-<img src ="https://img.shields.io/github/repo-size/OmerAran/booking?color=succeess&label=Size"> <img src="https://img.shields.io/github/directory-file-count/OmerAran/booking/src?color=yellow&label=%20Backend%20Modules"> <img src="https://img.shields.io/github/directory-file-count/OmerAran/booking/Frontend?color=orange&label=%20Frontend%20Modules"> 
+<img src ="https://img.shields.io/github/repo-size/OmerAran/booking?color=succeess&label=Size"> <img src="https://img.shields.io/github/directory-file-count/OmerAran/booking/src?color=yellow&label=%20Backend%20Modules"> <img src="https://img.shields.io/github/directory-file-count/OmerAran/booking/booking-react?color=orange&label=%20Frontend%20Modules"> 
 
 
 <!-- # Frontend
